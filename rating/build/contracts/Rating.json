@@ -1,0 +1,2853 @@
+{
+  "contractName": "Rating",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "moviesList",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_moviesList",
+          "type": "string[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "movieName",
+          "type": "string"
+        }
+      ],
+      "name": "addNewMovie",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "movieName",
+          "type": "string"
+        }
+      ],
+      "name": "getTotalVotes",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "movieName",
+          "type": "string"
+        }
+      ],
+      "name": "vote",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"movieName\",\"type\":\"string\"}],\"name\":\"addNewMovie\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"moviesList\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"movieName\",\"type\":\"string\"}],\"name\":\"getTotalVotes\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"movieName\",\"type\":\"string\"}],\"name\":\"vote\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_moviesList\",\"type\":\"string[]\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{\"addNewMovie(string)\":{\"details\":\"Adds new movie to the moviesList.\\r\",\"params\":{\"movieName\":\"Name of the movie \\r \\r Notes:\\r - Need to check whether movie already exists before adding to the list\\r\"}},\"getTotalVotes(string)\":{\"details\":\"Get total votes.\\r\",\"params\":{\"movieName\":\"Name of the movie\\r\"},\"return\":\"The total ratings a movie has received so far\\r Notes: \\r - You need to convert movieName from string to bytes32\\r\"},\"vote(string)\":{\"details\":\"Vote for a movie.\\r\",\"params\":{\"movieName\":\"Name of the movie\\r Note: \\r - You need to convert movieName from string to bytes32\\r\"}}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/phamc5/Desktop/Fall 2020/Blockchain/movieRatingApp/rating/contracts/Rating.sol\":\"Rating\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/phamc5/Desktop/Fall 2020/Blockchain/movieRatingApp/rating/contracts/Rating.sol\":{\"keccak256\":\"0x442bcde9245ab281972f40262fd9e3c08d29d761f82561defc691f0fe6e8c0a2\",\"urls\":[\"bzzr://2c0e94a8549d2358aec0ff71486d2fb5ddcd1fa776528d46a933ee2bf2fd2574\"]}},\"version\":1}",
+  "bytecode": "0x60806040523480156200001157600080fd5b5060405162000a8438038062000a848339810180604052620000379190810190620002c3565b80600090805190602001906200004f92919062000057565b5050620003c2565b828054828255906000526020600020908101928215620000ab579160200282015b82811115620000aa57825182908051906020019062000099929190620000be565b509160200191906001019062000078565b5b509050620000ba919062000145565b5090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106200010157805160ff191683800117855562000132565b8280016001018555821562000132579182015b828111156200013157825182559160200191906001019062000114565b5b50905062000141919062000176565b5090565b6200017391905b808211156200016f57600081816200016591906200019e565b506001016200014c565b5090565b90565b6200019b91905b80821115620001975760008160009055506001016200017d565b5090565b90565b50805460018160011615610100020316600290046000825580601f10620001c65750620001e7565b601f016020900490600052602060002090810190620001e6919062000176565b5b50565b600082601f830112620001fc57600080fd5b8151620002136200020d8262000336565b62000308565b9150818183526020840193506020810190508360005b838110156200025d578151860162000242888262000267565b84526020840193506020830192505060018101905062000229565b5050505092915050565b600082601f8301126200027957600080fd5b8151620002906200028a826200035f565b62000308565b91508082526020830160208301858383011115620002ad57600080fd5b620002ba8382846200038c565b50505092915050565b600060208284031215620002d657600080fd5b600082015167ffffffffffffffff811115620002f157600080fd5b620002ff84828501620001ea565b91505092915050565b6000604051905081810181811067ffffffffffffffff821117156200032c57600080fd5b8060405250919050565b600067ffffffffffffffff8211156200034e57600080fd5b602082029050602081019050919050565b600067ffffffffffffffff8211156200037757600080fd5b601f19601f8301169050602081019050919050565b60005b83811015620003ac5780820151818401526020810190506200038f565b83811115620003bc576000848401525b50505050565b6106b280620003d26000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806332e4cc57146100515780638cc975631461006d57806398d16f751461009d578063fc36e15b146100cd575b600080fd5b61006b60048036036100669190810190610433565b6100e9565b005b61008760048036036100829190810190610474565b6101c6565b6040516100949190610525565b60405180910390f35b6100b760048036036100b29190810190610433565b61027f565b6040516100c49190610567565b60405180910390f35b6100e760048036036100e29190810190610433565b6102b1565b005b60006100f4826102fa565b90506002600082815260200190815260200160002060009054906101000a900460ff1615610157576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161014e90610547565b60405180910390fd5b6000829080600181540180825580915050906001820390600052602060002001600090919290919091509080519060200190610194929190610325565b505060016002600083815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600081815481106101d357fe5b906000526020600020016000915090508054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102775780601f1061024c57610100808354040283529160200191610277565b820191906000526020600020905b81548152906001019060200180831161025a57829003601f168201915b505050505081565b60006001600061028e846102fa565b815260200190815260200160002060009054906101000a900460ff169050919050565b60018060006102bf846102fa565b815260200190815260200160002060008282829054906101000a900460ff160192506101000a81548160ff021916908360ff16021790555050565b60006060829050600081511415610317576000801b915050610320565b60208301519150505b919050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061036657805160ff1916838001178555610394565b82800160010185558215610394579182015b82811115610393578251825591602001919060010190610378565b5b5090506103a191906103a5565b5090565b6103c791905b808211156103c35760008160009055506001016103ab565b5090565b90565b600082601f8301126103db57600080fd5b81356103ee6103e9826105af565b610582565b9150808252602083016020830185838301111561040a57600080fd5b61041583828461060e565b50505092915050565b60008135905061042d81610661565b92915050565b60006020828403121561044557600080fd5b600082013567ffffffffffffffff81111561045f57600080fd5b61046b848285016103ca565b91505092915050565b60006020828403121561048657600080fd5b60006104948482850161041e565b91505092915050565b60006104a8826105db565b6104b281856105e6565b93506104c281856020860161061d565b6104cb81610650565b840191505092915050565b60006104e36018836105e6565b91507f4d6f76696520616c7265616479206578697473747321212100000000000000006000830152602082019050919050565b61051f81610601565b82525050565b6000602082019050818103600083015261053f818461049d565b905092915050565b60006020820190508181036000830152610560816104d6565b9050919050565b600060208201905061057c6000830184610516565b92915050565b6000604051905081810181811067ffffffffffffffff821117156105a557600080fd5b8060405250919050565b600067ffffffffffffffff8211156105c657600080fd5b601f19601f8301169050602081019050919050565b600081519050919050565b600082825260208201905092915050565b6000819050919050565b600060ff82169050919050565b82818337600083830152505050565b60005b8381101561063b578082015181840152602081019050610620565b8381111561064a576000848401525b50505050565b6000601f19601f8301169050919050565b61066a816105f7565b811461067557600080fd5b5056fea265627a7a7230582036567c1ecdb08a02499c1a6f23c3544e526cab652b8bbe36aebaf6758cd850236c6578706572696d656e74616cf50037",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c806332e4cc57146100515780638cc975631461006d57806398d16f751461009d578063fc36e15b146100cd575b600080fd5b61006b60048036036100669190810190610433565b6100e9565b005b61008760048036036100829190810190610474565b6101c6565b6040516100949190610525565b60405180910390f35b6100b760048036036100b29190810190610433565b61027f565b6040516100c49190610567565b60405180910390f35b6100e760048036036100e29190810190610433565b6102b1565b005b60006100f4826102fa565b90506002600082815260200190815260200160002060009054906101000a900460ff1615610157576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161014e90610547565b60405180910390fd5b6000829080600181540180825580915050906001820390600052602060002001600090919290919091509080519060200190610194929190610325565b505060016002600083815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600081815481106101d357fe5b906000526020600020016000915090508054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102775780601f1061024c57610100808354040283529160200191610277565b820191906000526020600020905b81548152906001019060200180831161025a57829003601f168201915b505050505081565b60006001600061028e846102fa565b815260200190815260200160002060009054906101000a900460ff169050919050565b60018060006102bf846102fa565b815260200190815260200160002060008282829054906101000a900460ff160192506101000a81548160ff021916908360ff16021790555050565b60006060829050600081511415610317576000801b915050610320565b60208301519150505b919050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061036657805160ff1916838001178555610394565b82800160010185558215610394579182015b82811115610393578251825591602001919060010190610378565b5b5090506103a191906103a5565b5090565b6103c791905b808211156103c35760008160009055506001016103ab565b5090565b90565b600082601f8301126103db57600080fd5b81356103ee6103e9826105af565b610582565b9150808252602083016020830185838301111561040a57600080fd5b61041583828461060e565b50505092915050565b60008135905061042d81610661565b92915050565b60006020828403121561044557600080fd5b600082013567ffffffffffffffff81111561045f57600080fd5b61046b848285016103ca565b91505092915050565b60006020828403121561048657600080fd5b60006104948482850161041e565b91505092915050565b60006104a8826105db565b6104b281856105e6565b93506104c281856020860161061d565b6104cb81610650565b840191505092915050565b60006104e36018836105e6565b91507f4d6f76696520616c7265616479206578697473747321212100000000000000006000830152602082019050919050565b61051f81610601565b82525050565b6000602082019050818103600083015261053f818461049d565b905092915050565b60006020820190508181036000830152610560816104d6565b9050919050565b600060208201905061057c6000830184610516565b92915050565b6000604051905081810181811067ffffffffffffffff821117156105a557600080fd5b8060405250919050565b600067ffffffffffffffff8211156105c657600080fd5b601f19601f8301169050602081019050919050565b600081519050919050565b600082825260208201905092915050565b6000819050919050565b600060ff82169050919050565b82818337600083830152505050565b60005b8381101561063b578082015181840152602081019050610620565b8381111561064a576000848401525b50505050565b6000601f19601f8301169050919050565b61066a816105f7565b811461067557600080fd5b5056fea265627a7a7230582036567c1ecdb08a02499c1a6f23c3544e526cab652b8bbe36aebaf6758cd850236c6578706572696d656e74616cf50037",
+  "sourceMap": "106:2015:1:-;;;324:91;8:9:-1;5:2;;;30:1;27;20:12;5:2;324:91:1;;;;;;;;;;;;;;;;;;;;;;;;395:11;382:10;:24;;;;;;;;;;;;:::i;:::-;;324:91;106:2015;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;22:704:-1:-;;156:3;149:4;141:6;137:17;133:27;123:2;;174:1;171;164:12;123:2;204:6;198:13;226:86;241:70;304:6;241:70;;;226:86;;;217:95;;329:5;354:6;347:5;340:21;384:4;376:6;372:17;362:27;;406:4;401:3;397:14;390:21;;459:6;492:1;477:243;502:6;499:1;496:13;477:243;;;578:3;572:10;564:6;560:23;602:54;652:3;640:10;602:54;;;597:3;590:67;680:4;675:3;671:14;664:21;;708:4;703:3;699:14;692:21;;534:186;524:1;521;517:9;512:14;;477:243;;;481:14;116:610;;;;;;;;735:436;;844:3;837:4;829:6;825:17;821:27;811:2;;862:1;859;852:12;811:2;892:6;886:13;914:61;929:45;967:6;929:45;;;914:61;;;905:70;;995:6;988:5;981:21;1031:4;1023:6;1019:17;1064:4;1057:5;1053:16;1099:3;1090:6;1085:3;1081:16;1078:25;1075:2;;;1116:1;1113;1106:12;1075:2;1126:39;1158:6;1153:3;1148;1126:39;;;804:367;;;;;;;;1179:404;;1325:2;1313:9;1304:7;1300:23;1296:32;1293:2;;;1341:1;1338;1331:12;1293:2;1397:1;1386:9;1382:17;1376:24;1420:18;1412:6;1409:30;1406:2;;;1452:1;1449;1442:12;1406:2;1472:95;1559:7;1550:6;1539:9;1535:22;1472:95;;;1462:105;;1355:218;1287:296;;;;;1590:256;;1652:2;1646:9;1636:19;;1690:4;1682:6;1678:17;1789:6;1777:10;1774:22;1753:18;1741:10;1738:34;1735:62;1732:2;;;1810:1;1807;1800:12;1732:2;1830:10;1826:2;1819:22;1630:216;;;;;1853:264;;2018:18;2010:6;2007:30;2004:2;;;2050:1;2047;2040:12;2004:2;2079:4;2071:6;2067:17;2059:25;;2107:4;2101;2097:15;2089:23;;1941:176;;;;2124:255;;2264:18;2256:6;2253:30;2250:2;;;2296:1;2293;2286:12;2250:2;2340:4;2336:9;2329:4;2321:6;2317:17;2313:33;2305:41;;2369:4;2363;2359:15;2351:23;;2187:192;;;;2387:268;2452:1;2459:101;2473:6;2470:1;2467:13;2459:101;;;2549:1;2544:3;2540:11;2534:18;2530:1;2525:3;2521:11;2514:39;2495:2;2492:1;2488:10;2483:15;;2459:101;;;2575:6;2572:1;2569:13;2566:2;;;2640:1;2631:6;2626:3;2622:16;2615:27;2566:2;2436:219;;;;;106:2015:1;;;;;;;",
+  "deployedSourceMap": "106:2015:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;106:2015:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;642:283;;;;;;;;;;;;;;;;:::i;:::-;;129:26;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;1170:137;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;1486:105;;;;;;;;;;;;;;;;:::i;:::-;;642:283;706:26;735;751:9;735:15;:26::i;:::-;706:55;;781:6;:26;788:18;781:26;;;;;;;;;;;;;;;;;;;;;780:27;772:64;;;;;;;;;;;;;;;;;;;;;;847:10;863:9;847:26;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;847:26:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;913:4;884:6;:26;891:18;884:26;;;;;;;;;;;;:33;;;;;;;;;;;;;;;;;;642:283;;:::o;129:26::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1170:137::-;1239:5;1264:7;:35;1272:26;1288:9;1272:15;:26::i;:::-;1264:35;;;;;;;;;;;;;;;;;;;;;1257:42;;1170:137;;;:::o;1486:105::-;1582:1;1543:7;:35;1551:26;1567:9;1551:15;:26::i;:::-;1543:35;;;;;;;;;;;;:40;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1486:105;:::o;1799:319::-;1868:14;1895:32;1936:6;1895:48;;1988:1;1958:19;:26;:31;1954:74;;;2013:3;2006:10;;;;;;;1954:74;2096:2;2088:6;2084:15;2078:22;2068:32;;2053:58;;;;;:::o;106:2015::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;6:442:-1:-;;108:3;101:4;93:6;89:17;85:27;75:2;;126:1;123;116:12;75:2;163:6;150:20;185:65;200:49;242:6;200:49;;;185:65;;;176:74;;270:6;263:5;256:21;306:4;298:6;294:17;339:4;332:5;328:16;374:3;365:6;360:3;356:16;353:25;350:2;;;391:1;388;381:12;350:2;401:41;435:6;430:3;425;401:41;;;68:380;;;;;;;;456:130;;536:6;523:20;514:29;;548:33;575:5;548:33;;;508:78;;;;;593:347;;707:2;695:9;686:7;682:23;678:32;675:2;;;723:1;720;713:12;675:2;786:1;775:9;771:17;758:31;809:18;801:6;798:30;795:2;;;841:1;838;831:12;795:2;861:63;916:7;907:6;896:9;892:22;861:63;;;851:73;;737:193;669:271;;;;;947:241;;1051:2;1039:9;1030:7;1026:23;1022:32;1019:2;;;1067:1;1064;1057:12;1019:2;1102:1;1119:53;1164:7;1155:6;1144:9;1140:22;1119:53;;;1109:63;;1081:97;1013:175;;;;;1195:339;;1303:35;1332:5;1303:35;;;1350:71;1414:6;1409:3;1350:71;;;1343:78;;1426:52;1471:6;1466:3;1459:4;1452:5;1448:16;1426:52;;;1499:29;1521:6;1499:29;;;1494:3;1490:39;1483:46;;1283:251;;;;;;1542:364;;1702:67;1766:2;1761:3;1702:67;;;1695:74;;1802:66;1798:1;1793:3;1789:11;1782:87;1897:2;1892:3;1888:12;1881:19;;1688:218;;;;1914:107;1993:22;2009:5;1993:22;;;1988:3;1981:35;1975:46;;;2028:293;;2162:2;2151:9;2147:18;2139:26;;2212:9;2206:4;2202:20;2198:1;2187:9;2183:17;2176:47;2237:74;2306:4;2297:6;2237:74;;;2229:82;;2133:188;;;;;2328:407;;2519:2;2508:9;2504:18;2496:26;;2569:9;2563:4;2559:20;2555:1;2544:9;2540:17;2533:47;2594:131;2720:4;2594:131;;;2586:139;;2490:245;;;;2742:205;;2856:2;2845:9;2841:18;2833:26;;2870:67;2934:1;2923:9;2919:17;2910:6;2870:67;;;2827:120;;;;;2954:256;;3016:2;3010:9;3000:19;;3054:4;3046:6;3042:17;3153:6;3141:10;3138:22;3117:18;3105:10;3102:34;3099:62;3096:2;;;3174:1;3171;3164:12;3096:2;3194:10;3190:2;3183:22;2994:216;;;;;3217:259;;3361:18;3353:6;3350:30;3347:2;;;3393:1;3390;3383:12;3347:2;3437:4;3433:9;3426:4;3418:6;3414:17;3410:33;3402:41;;3466:4;3460;3456:15;3448:23;;3284:192;;;;3483:88;;3560:5;3554:12;3544:22;;3538:33;;;;3579:163;;3694:6;3689:3;3682:19;3731:4;3726:3;3722:14;3707:29;;3675:67;;;;;3750:72;;3812:5;3801:16;;3795:27;;;;3829:81;;3900:4;3893:5;3889:16;3878:27;;3872:38;;;;3918:145;3999:6;3994:3;3989;3976:30;4055:1;4046:6;4041:3;4037:16;4030:27;3969:94;;;;4072:268;4137:1;4144:101;4158:6;4155:1;4152:13;4144:101;;;4234:1;4229:3;4225:11;4219:18;4215:1;4210:3;4206:11;4199:39;4180:2;4177:1;4173:10;4168:15;;4144:101;;;4260:6;4257:1;4254:13;4251:2;;;4325:1;4316:6;4311:3;4307:16;4300:27;4251:2;4121:219;;;;;4348:97;;4436:2;4432:7;4427:2;4420:5;4416:14;4412:28;4402:38;;4396:49;;;;4453:117;4522:24;4540:5;4522:24;;;4515:5;4512:35;4502:2;;4561:1;4558;4551:12;4502:2;4496:74;",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.22 <0.8.0;\r\n\r\npragma experimental ABIEncoderV2;\r\n\r\ncontract Rating {\r\n    string[] public moviesList; // [\"Tenant\", \"Mulan\"] + \"Sonic the Hedgehog\"\r\n    \r\n    mapping (bytes32 => uint8) private ratings;\r\n    \r\n    mapping (bytes32 => bool) private movies;\r\n    \r\n\r\n    constructor(string[] memory _moviesList) public {\r\n       moviesList = _moviesList; \r\n    }\r\n\r\n    /**\r\n      * @dev Adds new movie to the moviesList.\r\n      * @param movieName Name of the movie \r\n      * \r\n      * Notes:\r\n      * - Need to check whether movie already exists before adding to the list\r\n      */ \r\n    function addNewMovie(string memory movieName) public {\r\n        bytes32 movieNameInBytes32 = stringToBytes32(movieName);\r\n        require(!movies[movieNameInBytes32], \"Movie already exitsts!!!\");\r\n        moviesList.push(movieName);\r\n        movies[movieNameInBytes32] = true;\r\n    }\r\n    \r\n    /** \r\n     * @dev Get total votes.\r\n     * @param movieName Name of the movie\r\n     * @return The total ratings a movie has received so far\r\n     * Notes: \r\n     * - You need to convert movieName from string to bytes32\r\n     */\r\n    function getTotalVotes(string memory movieName) public view returns (uint8) {\r\n        return ratings[stringToBytes32(movieName)];\r\n    }\r\n\r\n    /** \r\n     * @dev Vote for a movie.\r\n     * @param movieName Name of the movie\r\n     * Note: \r\n     * - You need to convert movieName from string to bytes32\r\n     */\r\n    function vote(string memory movieName) public {\r\n        ratings[stringToBytes32(movieName)] += 1;\r\n    }\r\n  \r\n    /** \r\n     * @dev Convert string to bytes32.\r\n     * @param source String source\r\n     * @return bytes32\r\n     * Notes: \r\n     * - You need to convert movieName from string to bytes32\r\n     */\r\n    function stringToBytes32(string memory source) private pure returns (bytes32 result) {\r\n        bytes memory tempEmptyStringTest = bytes(source);\r\n        if (tempEmptyStringTest.length == 0) {\r\n            return 0x0;\r\n        }\r\n    \r\n        assembly {\r\n            result := mload(add(source, 32))\r\n        }\r\n    }\r\n}",
+  "sourcePath": "C:/Users/phamc5/Desktop/Fall 2020/Blockchain/movieRatingApp/rating/contracts/Rating.sol",
+  "ast": {
+    "absolutePath": "/C/Users/phamc5/Desktop/Fall 2020/Blockchain/movieRatingApp/rating/contracts/Rating.sol",
+    "exportedSymbols": {
+      "Rating": [
+        141
+      ]
+    },
+    "id": 142,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 34,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:32:1"
+      },
+      {
+        "id": 35,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "69:33:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 141,
+        "linearizedBaseContracts": [
+          141
+        ],
+        "name": "Rating",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 38,
+            "name": "moviesList",
+            "nodeType": "VariableDeclaration",
+            "scope": 141,
+            "src": "129:26:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+              "typeString": "string[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 36,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "129:6:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "id": 37,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "129:8:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                "typeString": "string[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 42,
+            "name": "ratings",
+            "nodeType": "VariableDeclaration",
+            "scope": 141,
+            "src": "214:42:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint8_$",
+              "typeString": "mapping(bytes32 => uint8)"
+            },
+            "typeName": {
+              "id": 41,
+              "keyType": {
+                "id": 39,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "223:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "214:26:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint8_$",
+                "typeString": "mapping(bytes32 => uint8)"
+              },
+              "valueType": {
+                "id": 40,
+                "name": "uint8",
+                "nodeType": "ElementaryTypeName",
+                "src": "234:5:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "constant": false,
+            "id": 46,
+            "name": "movies",
+            "nodeType": "VariableDeclaration",
+            "scope": 141,
+            "src": "269:40:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+              "typeString": "mapping(bytes32 => bool)"
+            },
+            "typeName": {
+              "id": 45,
+              "keyType": {
+                "id": 43,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "278:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "269:25:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+                "typeString": "mapping(bytes32 => bool)"
+              },
+              "valueType": {
+                "id": 44,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "289:4:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 56,
+              "nodeType": "Block",
+              "src": "372:43:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 54,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 52,
+                      "name": "moviesList",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38,
+                      "src": "382:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+                        "typeString": "string storage ref[] storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 53,
+                      "name": "_moviesList",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 49,
+                      "src": "395:11:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                        "typeString": "string memory[] memory"
+                      }
+                    },
+                    "src": "382:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+                      "typeString": "string storage ref[] storage ref"
+                    }
+                  },
+                  "id": 55,
+                  "nodeType": "ExpressionStatement",
+                  "src": "382:24:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 57,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 50,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 49,
+                  "name": "_moviesList",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57,
+                  "src": "336:27:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 47,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "336:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 48,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "336:8:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "335:29:1"
+            },
+            "returnParameters": {
+              "id": 51,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "372:0:1"
+            },
+            "scope": 141,
+            "src": "324:91:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 88,
+              "nodeType": "Block",
+              "src": "695:230:1",
+              "statements": [
+                {
+                  "assignments": [
+                    63
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 63,
+                      "name": "movieNameInBytes32",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 88,
+                      "src": "706:26:1",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      },
+                      "typeName": {
+                        "id": 62,
+                        "name": "bytes32",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "706:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 67,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 65,
+                        "name": "movieName",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 59,
+                        "src": "751:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 64,
+                      "name": "stringToBytes32",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 140,
+                      "src": "735:15:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_string_memory_ptr_$returns$_t_bytes32_$",
+                        "typeString": "function (string memory) pure returns (bytes32)"
+                      }
+                    },
+                    "id": 66,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "735:26:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "706:55:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 72,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "780:27:1",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 69,
+                            "name": "movies",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 46,
+                            "src": "781:6:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+                              "typeString": "mapping(bytes32 => bool)"
+                            }
+                          },
+                          "id": 71,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 70,
+                            "name": "movieNameInBytes32",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 63,
+                            "src": "788:18:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "781:26:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4d6f76696520616c72656164792065786974737473212121",
+                        "id": 73,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "809:26:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_3053ca37404568201c432def4a3d03b695a5812bc50041e96df89abedb34894c",
+                          "typeString": "literal_string \"Movie already exitsts!!!\""
+                        },
+                        "value": "Movie already exitsts!!!"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_3053ca37404568201c432def4a3d03b695a5812bc50041e96df89abedb34894c",
+                          "typeString": "literal_string \"Movie already exitsts!!!\""
+                        }
+                      ],
+                      "id": 68,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        159,
+                        160
+                      ],
+                      "referencedDeclaration": 160,
+                      "src": "772:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 74,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "772:64:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 75,
+                  "nodeType": "ExpressionStatement",
+                  "src": "772:64:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 79,
+                        "name": "movieName",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 59,
+                        "src": "863:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 76,
+                        "name": "moviesList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38,
+                        "src": "847:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+                          "typeString": "string storage ref[] storage ref"
+                        }
+                      },
+                      "id": 78,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "847:15:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_string_storage_$returns$_t_uint256_$",
+                        "typeString": "function (string storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 80,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "847:26:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 81,
+                  "nodeType": "ExpressionStatement",
+                  "src": "847:26:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 86,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 82,
+                        "name": "movies",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 46,
+                        "src": "884:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+                          "typeString": "mapping(bytes32 => bool)"
+                        }
+                      },
+                      "id": 84,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 83,
+                        "name": "movieNameInBytes32",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 63,
+                        "src": "891:18:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "884:26:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 85,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "913:4:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "884:33:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 87,
+                  "nodeType": "ExpressionStatement",
+                  "src": "884:33:1"
+                }
+              ]
+            },
+            "documentation": "@dev Adds new movie to the moviesList.\r\n@param movieName Name of the movie \r\n\r\nNotes:\r\n- Need to check whether movie already exists before adding to the list\r",
+            "id": 89,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addNewMovie",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 60,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59,
+                  "name": "movieName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 89,
+                  "src": "663:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 58,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "663:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "662:25:1"
+            },
+            "returnParameters": {
+              "id": 61,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "695:0:1"
+            },
+            "scope": 141,
+            "src": "642:283:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 102,
+              "nodeType": "Block",
+              "src": "1246:61:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 96,
+                      "name": "ratings",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 42,
+                      "src": "1264:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint8_$",
+                        "typeString": "mapping(bytes32 => uint8)"
+                      }
+                    },
+                    "id": 100,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 98,
+                          "name": "movieName",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 91,
+                          "src": "1288:9:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        ],
+                        "id": 97,
+                        "name": "stringToBytes32",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 140,
+                        "src": "1272:15:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_string_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (string memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 99,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1272:26:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1264:35:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 95,
+                  "id": 101,
+                  "nodeType": "Return",
+                  "src": "1257:42:1"
+                }
+              ]
+            },
+            "documentation": "@dev Get total votes.\r\n@param movieName Name of the movie\r\n@return The total ratings a movie has received so far\r\nNotes: \r\n- You need to convert movieName from string to bytes32\r",
+            "id": 103,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTotalVotes",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 92,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 91,
+                  "name": "movieName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 103,
+                  "src": "1193:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 90,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1193:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1192:25:1"
+            },
+            "returnParameters": {
+              "id": 95,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 94,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 103,
+                  "src": "1239:5:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 93,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1239:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1238:7:1"
+            },
+            "scope": 141,
+            "src": "1170:137:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 116,
+              "nodeType": "Block",
+              "src": "1532:59:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 114,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 108,
+                        "name": "ratings",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 42,
+                        "src": "1543:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint8_$",
+                          "typeString": "mapping(bytes32 => uint8)"
+                        }
+                      },
+                      "id": 112,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 110,
+                            "name": "movieName",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 105,
+                            "src": "1567:9:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          ],
+                          "id": 109,
+                          "name": "stringToBytes32",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 140,
+                          "src": "1551:15:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_string_memory_ptr_$returns$_t_bytes32_$",
+                            "typeString": "function (string memory) pure returns (bytes32)"
+                          }
+                        },
+                        "id": 111,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1551:26:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1543:35:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 113,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1582:1:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "1543:40:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 115,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1543:40:1"
+                }
+              ]
+            },
+            "documentation": "@dev Vote for a movie.\r\n@param movieName Name of the movie\r\nNote: \r\n- You need to convert movieName from string to bytes32\r",
+            "id": 117,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "vote",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 106,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 105,
+                  "name": "movieName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 117,
+                  "src": "1500:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 104,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1500:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1499:25:1"
+            },
+            "returnParameters": {
+              "id": 107,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1532:0:1"
+            },
+            "scope": 141,
+            "src": "1486:105:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 139,
+              "nodeType": "Block",
+              "src": "1884:234:1",
+              "statements": [
+                {
+                  "assignments": [
+                    125
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 125,
+                      "name": "tempEmptyStringTest",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 139,
+                      "src": "1895:32:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 124,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1895:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 129,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 127,
+                        "name": "source",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 119,
+                        "src": "1936:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 126,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "1930:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_bytes_storage_ptr_$",
+                        "typeString": "type(bytes storage pointer)"
+                      },
+                      "typeName": "bytes"
+                    },
+                    "id": 128,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1930:13:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1895:48:1"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 133,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 130,
+                        "name": "tempEmptyStringTest",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 125,
+                        "src": "1958:19:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      "id": 131,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1958:26:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 132,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1988:1:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "1958:31:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 137,
+                  "nodeType": "IfStatement",
+                  "src": "1954:74:1",
+                  "trueBody": {
+                    "id": 136,
+                    "nodeType": "Block",
+                    "src": "1991:37:1",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "307830",
+                          "id": 134,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "2013:3:1",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0x0"
+                        },
+                        "functionReturnParameters": 123,
+                        "id": 135,
+                        "nodeType": "Return",
+                        "src": "2006:10:1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "externalReferences": [
+                    {
+                      "result": {
+                        "declaration": 122,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "2068:6:1",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "source": {
+                        "declaration": 119,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "2088:6:1",
+                        "valueSize": 1
+                      }
+                    }
+                  ],
+                  "id": 138,
+                  "nodeType": "InlineAssembly",
+                  "operations": "{\n    result := mload(add(source, 32))\n}",
+                  "src": "2044:67:1"
+                }
+              ]
+            },
+            "documentation": "@dev Convert string to bytes32.\r\n@param source String source\r\n@return bytes32\r\nNotes: \r\n- You need to convert movieName from string to bytes32\r",
+            "id": 140,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "stringToBytes32",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 120,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 119,
+                  "name": "source",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 140,
+                  "src": "1824:20:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 118,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1824:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1823:22:1"
+            },
+            "returnParameters": {
+              "id": 123,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 122,
+                  "name": "result",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 140,
+                  "src": "1868:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 121,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1868:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1867:16:1"
+            },
+            "scope": 141,
+            "src": "1799:319:1",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "private"
+          }
+        ],
+        "scope": 142,
+        "src": "106:2015:1"
+      }
+    ],
+    "src": "33:2088:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/phamc5/Desktop/Fall 2020/Blockchain/movieRatingApp/rating/contracts/Rating.sol",
+    "exportedSymbols": {
+      "Rating": [
+        141
+      ]
+    },
+    "id": 142,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 34,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:32:1"
+      },
+      {
+        "id": 35,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "69:33:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 141,
+        "linearizedBaseContracts": [
+          141
+        ],
+        "name": "Rating",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 38,
+            "name": "moviesList",
+            "nodeType": "VariableDeclaration",
+            "scope": 141,
+            "src": "129:26:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+              "typeString": "string[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 36,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "129:6:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "id": 37,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "129:8:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                "typeString": "string[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 42,
+            "name": "ratings",
+            "nodeType": "VariableDeclaration",
+            "scope": 141,
+            "src": "214:42:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint8_$",
+              "typeString": "mapping(bytes32 => uint8)"
+            },
+            "typeName": {
+              "id": 41,
+              "keyType": {
+                "id": 39,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "223:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "214:26:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint8_$",
+                "typeString": "mapping(bytes32 => uint8)"
+              },
+              "valueType": {
+                "id": 40,
+                "name": "uint8",
+                "nodeType": "ElementaryTypeName",
+                "src": "234:5:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "constant": false,
+            "id": 46,
+            "name": "movies",
+            "nodeType": "VariableDeclaration",
+            "scope": 141,
+            "src": "269:40:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+              "typeString": "mapping(bytes32 => bool)"
+            },
+            "typeName": {
+              "id": 45,
+              "keyType": {
+                "id": 43,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "278:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "269:25:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+                "typeString": "mapping(bytes32 => bool)"
+              },
+              "valueType": {
+                "id": 44,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "289:4:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 56,
+              "nodeType": "Block",
+              "src": "372:43:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 54,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 52,
+                      "name": "moviesList",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38,
+                      "src": "382:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+                        "typeString": "string storage ref[] storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 53,
+                      "name": "_moviesList",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 49,
+                      "src": "395:11:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                        "typeString": "string memory[] memory"
+                      }
+                    },
+                    "src": "382:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+                      "typeString": "string storage ref[] storage ref"
+                    }
+                  },
+                  "id": 55,
+                  "nodeType": "ExpressionStatement",
+                  "src": "382:24:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 57,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 50,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 49,
+                  "name": "_moviesList",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57,
+                  "src": "336:27:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_memory_$dyn_memory_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 47,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "336:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 48,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "336:8:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "335:29:1"
+            },
+            "returnParameters": {
+              "id": 51,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "372:0:1"
+            },
+            "scope": 141,
+            "src": "324:91:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 88,
+              "nodeType": "Block",
+              "src": "695:230:1",
+              "statements": [
+                {
+                  "assignments": [
+                    63
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 63,
+                      "name": "movieNameInBytes32",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 88,
+                      "src": "706:26:1",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      },
+                      "typeName": {
+                        "id": 62,
+                        "name": "bytes32",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "706:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 67,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 65,
+                        "name": "movieName",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 59,
+                        "src": "751:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 64,
+                      "name": "stringToBytes32",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 140,
+                      "src": "735:15:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_string_memory_ptr_$returns$_t_bytes32_$",
+                        "typeString": "function (string memory) pure returns (bytes32)"
+                      }
+                    },
+                    "id": 66,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "735:26:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "706:55:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 72,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "780:27:1",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 69,
+                            "name": "movies",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 46,
+                            "src": "781:6:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+                              "typeString": "mapping(bytes32 => bool)"
+                            }
+                          },
+                          "id": 71,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 70,
+                            "name": "movieNameInBytes32",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 63,
+                            "src": "788:18:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "781:26:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4d6f76696520616c72656164792065786974737473212121",
+                        "id": 73,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "809:26:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_3053ca37404568201c432def4a3d03b695a5812bc50041e96df89abedb34894c",
+                          "typeString": "literal_string \"Movie already exitsts!!!\""
+                        },
+                        "value": "Movie already exitsts!!!"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_3053ca37404568201c432def4a3d03b695a5812bc50041e96df89abedb34894c",
+                          "typeString": "literal_string \"Movie already exitsts!!!\""
+                        }
+                      ],
+                      "id": 68,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        159,
+                        160
+                      ],
+                      "referencedDeclaration": 160,
+                      "src": "772:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 74,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "772:64:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 75,
+                  "nodeType": "ExpressionStatement",
+                  "src": "772:64:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 79,
+                        "name": "movieName",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 59,
+                        "src": "863:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 76,
+                        "name": "moviesList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38,
+                        "src": "847:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+                          "typeString": "string storage ref[] storage ref"
+                        }
+                      },
+                      "id": 78,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "847:15:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_string_storage_$returns$_t_uint256_$",
+                        "typeString": "function (string storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 80,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "847:26:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 81,
+                  "nodeType": "ExpressionStatement",
+                  "src": "847:26:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 86,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 82,
+                        "name": "movies",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 46,
+                        "src": "884:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+                          "typeString": "mapping(bytes32 => bool)"
+                        }
+                      },
+                      "id": 84,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 83,
+                        "name": "movieNameInBytes32",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 63,
+                        "src": "891:18:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "884:26:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 85,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "913:4:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "884:33:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 87,
+                  "nodeType": "ExpressionStatement",
+                  "src": "884:33:1"
+                }
+              ]
+            },
+            "documentation": "@dev Adds new movie to the moviesList.\r\n@param movieName Name of the movie \r\n\r\nNotes:\r\n- Need to check whether movie already exists before adding to the list\r",
+            "id": 89,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addNewMovie",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 60,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59,
+                  "name": "movieName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 89,
+                  "src": "663:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 58,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "663:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "662:25:1"
+            },
+            "returnParameters": {
+              "id": 61,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "695:0:1"
+            },
+            "scope": 141,
+            "src": "642:283:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 102,
+              "nodeType": "Block",
+              "src": "1246:61:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 96,
+                      "name": "ratings",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 42,
+                      "src": "1264:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint8_$",
+                        "typeString": "mapping(bytes32 => uint8)"
+                      }
+                    },
+                    "id": 100,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 98,
+                          "name": "movieName",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 91,
+                          "src": "1288:9:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        ],
+                        "id": 97,
+                        "name": "stringToBytes32",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 140,
+                        "src": "1272:15:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_string_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (string memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 99,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1272:26:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1264:35:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 95,
+                  "id": 101,
+                  "nodeType": "Return",
+                  "src": "1257:42:1"
+                }
+              ]
+            },
+            "documentation": "@dev Get total votes.\r\n@param movieName Name of the movie\r\n@return The total ratings a movie has received so far\r\nNotes: \r\n- You need to convert movieName from string to bytes32\r",
+            "id": 103,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTotalVotes",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 92,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 91,
+                  "name": "movieName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 103,
+                  "src": "1193:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 90,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1193:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1192:25:1"
+            },
+            "returnParameters": {
+              "id": 95,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 94,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 103,
+                  "src": "1239:5:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 93,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1239:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1238:7:1"
+            },
+            "scope": 141,
+            "src": "1170:137:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 116,
+              "nodeType": "Block",
+              "src": "1532:59:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 114,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 108,
+                        "name": "ratings",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 42,
+                        "src": "1543:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint8_$",
+                          "typeString": "mapping(bytes32 => uint8)"
+                        }
+                      },
+                      "id": 112,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 110,
+                            "name": "movieName",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 105,
+                            "src": "1567:9:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          ],
+                          "id": 109,
+                          "name": "stringToBytes32",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 140,
+                          "src": "1551:15:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_string_memory_ptr_$returns$_t_bytes32_$",
+                            "typeString": "function (string memory) pure returns (bytes32)"
+                          }
+                        },
+                        "id": 111,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1551:26:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1543:35:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 113,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1582:1:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "1543:40:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 115,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1543:40:1"
+                }
+              ]
+            },
+            "documentation": "@dev Vote for a movie.\r\n@param movieName Name of the movie\r\nNote: \r\n- You need to convert movieName from string to bytes32\r",
+            "id": 117,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "vote",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 106,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 105,
+                  "name": "movieName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 117,
+                  "src": "1500:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 104,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1500:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1499:25:1"
+            },
+            "returnParameters": {
+              "id": 107,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1532:0:1"
+            },
+            "scope": 141,
+            "src": "1486:105:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 139,
+              "nodeType": "Block",
+              "src": "1884:234:1",
+              "statements": [
+                {
+                  "assignments": [
+                    125
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 125,
+                      "name": "tempEmptyStringTest",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 139,
+                      "src": "1895:32:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 124,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1895:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 129,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 127,
+                        "name": "source",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 119,
+                        "src": "1936:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 126,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "1930:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_bytes_storage_ptr_$",
+                        "typeString": "type(bytes storage pointer)"
+                      },
+                      "typeName": "bytes"
+                    },
+                    "id": 128,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1930:13:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1895:48:1"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 133,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 130,
+                        "name": "tempEmptyStringTest",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 125,
+                        "src": "1958:19:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      "id": 131,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1958:26:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 132,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1988:1:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "1958:31:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 137,
+                  "nodeType": "IfStatement",
+                  "src": "1954:74:1",
+                  "trueBody": {
+                    "id": 136,
+                    "nodeType": "Block",
+                    "src": "1991:37:1",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "307830",
+                          "id": 134,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "2013:3:1",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0x0"
+                        },
+                        "functionReturnParameters": 123,
+                        "id": 135,
+                        "nodeType": "Return",
+                        "src": "2006:10:1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "externalReferences": [
+                    {
+                      "result": {
+                        "declaration": 122,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "2068:6:1",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "source": {
+                        "declaration": 119,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "2088:6:1",
+                        "valueSize": 1
+                      }
+                    }
+                  ],
+                  "id": 138,
+                  "nodeType": "InlineAssembly",
+                  "operations": "{\n    result := mload(add(source, 32))\n}",
+                  "src": "2044:67:1"
+                }
+              ]
+            },
+            "documentation": "@dev Convert string to bytes32.\r\n@param source String source\r\n@return bytes32\r\nNotes: \r\n- You need to convert movieName from string to bytes32\r",
+            "id": 140,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "stringToBytes32",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 120,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 119,
+                  "name": "source",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 140,
+                  "src": "1824:20:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 118,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1824:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1823:22:1"
+            },
+            "returnParameters": {
+              "id": 123,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 122,
+                  "name": "result",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 140,
+                  "src": "1868:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 121,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1868:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1867:16:1"
+            },
+            "scope": 141,
+            "src": "1799:319:1",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "private"
+          }
+        ],
+        "scope": 142,
+        "src": "106:2015:1"
+      }
+    ],
+    "src": "33:2088:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {
+    "1603392380533": {
+      "events": {},
+      "links": {},
+      "address": "0x931C9621690EF3095eE76aA441537341D6f8929f",
+      "transactionHash": "0xe43e65396feb775429f6d991f32af62111f2cd6699db8a60beb0b7fe966c30d4"
+    },
+    "1603418126258": {
+      "events": {},
+      "links": {},
+      "address": "0x70929952D9Db0358058f9A3A7a8Ce01d5b92fE4A",
+      "transactionHash": "0x4712b15f655136363b6271fe6a692d3b150c4c682526055bc4022e3e55af6377"
+    },
+    "1603822637668": {
+      "events": {},
+      "links": {},
+      "address": "0x70B3B4171fD6C5304F08f3BcBE06237E0324D44d",
+      "transactionHash": "0xc44c63612af50b2cc94b5e3579b59e04c1ecddc4f0c88e3687a5b425798bef41"
+    }
+  },
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2020-10-27T18:21:42.203Z",
+  "devdoc": {
+    "methods": {
+      "addNewMovie(string)": {
+        "details": "Adds new movie to the moviesList.\r",
+        "params": {
+          "movieName": "Name of the movie \r \r Notes:\r - Need to check whether movie already exists before adding to the list\r"
+        }
+      },
+      "getTotalVotes(string)": {
+        "details": "Get total votes.\r",
+        "params": {
+          "movieName": "Name of the movie\r"
+        },
+        "return": "The total ratings a movie has received so far\r Notes: \r - You need to convert movieName from string to bytes32\r"
+      },
+      "vote(string)": {
+        "details": "Vote for a movie.\r",
+        "params": {
+          "movieName": "Name of the movie\r Note: \r - You need to convert movieName from string to bytes32\r"
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
