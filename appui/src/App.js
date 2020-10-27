@@ -22,7 +22,7 @@ class App extends Component {
         ratingContract.methods.vote(movie).send({ from: account0 }, (error, transactionHash) => {
             console.log("vote clicked!!!");
             if (!error) {
-                ratingContract.methods.getTotalVotes(movie).call().then(function(votes) {
+                ratingContract.methods.getTotalVotes(movie).call().then(function (votes) {
                     app.setState({
                         movies: app.state.movies.map(
                             (el) => el.name === movie ? Object.assign({}, el, { rating: votes }) : el
@@ -33,19 +33,17 @@ class App extends Component {
         });
     }
     render() {
-        return ( <
-            div className = "App" >
-            <
-            p className = "App-intro" >
-            Movie Rating Application in Ethereum and React <
-            /p> <
-            div className = "movie-table" >
-            <
-            ShowMovies movies = { this.state.movies }
-            vote = { this.handleVoting }
-            /> < /
-            div > <
-            /div>
+        return (<div className="App" >
+            <p className="App-intro" >
+                Movie Rating Application in Ethereum and React
+                    </p>
+            <div className="movie-table" >
+                <
+                    ShowMovies movies={this.state.movies}
+                    vote={this.handleVoting}
+                />
+            </div >
+        </div>
         );
     }
 }
